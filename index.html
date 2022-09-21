@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="usercard" id="usercard">
+        <p></p>
+    </div>
+    <div class="container">
+        <div class="inner">
+    <div class="item">
+          <img src="potato.png"  width="92px" height="70px" alt="">
+          <button class="btn" id="btn1">Add</button>
+            </div>
+
+            <div class="item">
+                <img src="rice.png"  width="92px" height="70px"alt="">
+                <button class="btn" id="btn2">Add</button>              </div>
+
+        <div class="item">
+            <img src="salad.png"  width="92px" height="70px" alt="">
+            <button class="btn" id="btn3">Add</button>
+          </div>
+        
+      <div class="item">
+        <img src="fri.png"  width="92px" height="70px" alt="">
+        <button class="btn" id="btn4">Add</button>
+      </div>
+      
+      <div class="item">
+        <img src="garlic.png"  width="92px" height="70px" alt="">
+        <button class="btn" id="btn5">Add</button>
+          </div>
+      
+          <div class="item">
+            <img src="strip.png"  width="92px" height="70px" alt="">
+            <button class="btn" id="btn6">Add</button>
+         </div>
+
+         <div class="item">
+            <img src="ketchup.png"  width="92px" height="70px" alt="">
+            <button class="btn" id="btn7">Add</button>
+          </div>
+          
+          <div class="item">
+            <img src="mayonese.png"  width="92px" height="70px" alt="">
+            <button class="btn" id="btn8">Add</button>
+              </div>
+          
+              <div class="item">
+                <img src="cheese.png"  width="92px" height="70px" alt="">
+                <button class="btn" id="btn9">Add</button>
+             </div>
+             <br><br>
+             <!-- image trademark -->
+            <div class="imageTrade"><img src="data:image/png;base64,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" alt=""></div>
+        </div>
+    </div>
+
+
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            font-size:18px;
+            background-color: whitesmoke;
+        }
+        #usercard p{
+            position: relative;
+            top: 45px;
+            left:-95px;
+        }
+        .imageTrade img{
+            height:50px;
+            width: 70px;
+            position: relative;
+            top: 40px;
+            left: 28px;
+            margin-bottom: 50px;
+        }
+       .container{
+           max-width: 390px;
+       } 
+       .inner {
+           
+           display: grid;
+           
+           grid-template-columns: 1fr 1fr 1fr;
+           grid-template-rows: 200px 200px 200px;
+       }
+       .img{
+           width: 150px;
+       }
+       .item{
+           text-align: center;
+           margin-top:115px ;
+       }
+       .btn{
+           background: orange;
+           display: inline;
+           padding: 5px 20px;
+           border: none;
+           border-radius: 10px;
+           text-transform: uppercase;
+       }
+       .btn:hover{
+         background-color: lightgreen;
+         transition: .5s;
+       }
+       .usercard{
+           text-align: center;
+       }
+    </style>
+<script>
+    let tg = window.Telegram.WebApp;
+
+    tg.expand()
+    tg.MainButton.textColor = "#FFFFFF";
+    tg.MainButton.color = "#2cab37";
+
+    let item = "";
+
+    let btn1 = document.getElementById("btn1");
+    let btn2 = document.getElementById("btn2");
+    let btn3 = document.getElementById("btn3");
+    let btn4 = document.getElementById("btn4");
+    let btn5 = document.getElementById("btn5");
+    let btn6 = document.getElementById("btn6");
+    let btn7 = document.getElementById("btn7");
+    let btn8 = document.getElementById("btn8");
+    let btn9 = document.getElementById("btn9");
+    
+    btn1.addEventListener("click",function(){
+          if(tg.MainButton.isVisible){
+              tg.MainButton.hide();
+          }
+          else{
+              tg.MainButton.setText("вы выброли товар один");
+              item = "1";
+              tg.MainButton.show();
+          }
+    });
+    btn2.addEventListener("click",function(){
+          if(tg.MainButton.isVisible){
+              tg.MainButton.hide();
+          }
+          else{
+              tg.MainButton.setText("вы выброли товар один");
+              item = "2";
+              tg.MainButton.show();
+          }
+    });
+    btn3.addEventListener("click",function(){
+          if(tg.MainButton.isVisible){
+              tg.MainButton.hide();
+          }
+          else{
+              tg.MainButton.setText("вы выброли товар один");
+              item = "3";
+              tg.MainButton.show();
+          }
+    });
+    btn4.addEventListener("click",function(){
+          if(tg.MainButton.isVisible){
+              tg.MainButton.hide();
+          }
+          else{
+              tg.MainButton.setText("вы выброли товар один");
+              item = "4";
+              tg.MainButton.show();
+          }
+    });
+    btn5.addEventListener("click",function(){
+          if(tg.MainButton.isVisible){
+              tg.MainButton.hide();
+          }
+          else{
+              tg.MainButton.setText("вы выброли товар один");
+              item = "5";
+              tg.MainButton.show();
+          }
+    });
+    btn6.addEventListener("click",function(){
+          if(tg.MainButton.isVisible){
+              tg.MainButton.hide();
+          }
+          else{
+              tg.MainButton.setText("вы выброли товар один");
+              item = "6";
+              tg.MainButton.show();
+          }
+    });
+    
+    Telegram.WebApp.onEvent("mainButtonClicked", function (){
+         tg.sendData(item);
+    });
+
+    let usercard = document.getElementById("usercard");
+
+    let p = document.createElement("p");
+    p.innerHTML=`${tg.initDataUnsafe.first_name}
+    ${tg.initDataUnsafe.last_name}`;
+  
+    usercard.appendChild(p);
+
+</script>
+</body>
+</html>
