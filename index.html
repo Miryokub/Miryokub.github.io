@@ -116,9 +116,51 @@
 <script>
     let tg = window.Telegram.WebApp;
 
-    tg.expand()
-    tg.MainButton.textColor = "#FFFFFF";
-    tg.MainButton.color = "#2cab37";
+  tg.expand()
+  tg.MainButton.text = "Changed Text"; //изменяем текст кнопки 
+  tg.MainButton.setText("Changed Text1"); //изменяем текст кнопки иначе
+  tg.MainButton.textColor = "#F55353"; //изменяем цвет текста кнопки
+  tg.MainButton.color = "#143F6B"; //изменяем цвет бэкграунда кнопки
+  tg.MainButton.setParams({"color": "#143F6B"});
+
+  btn.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
+	if (tg.MainButton.isVisible){ //если кнопка показана 
+		tg.MainButton.hide() //скрываем кнопку 
+	}
+  else{ //иначе
+  	tg.MainButton.show() //показываем 
+  }
+});
+
+tg.initData //получаем данные от пользователя в виде строки (работает только при запуске из меню команд бота). 
+tg.initDataUnsafe // получаем данные от пользователя в виде объекта (работает только при запуске из меню команд бота). 
+tg.isExpanded // возвращает true, если приложение открыто на всю высоту, false - если нет. 
+tg.viewportHeight // вернёт ширину окна.
+tg.sendData(data) // отправляет данные  боту в строковом виде, после чего закрывает приложение (работает только если приложение запущено с keyboard button). 
+tg.ready() // метод позволяет отследить, когда приложение готово к отображению.
+tg.expand() // метод позволяет растянуть окно на всю высоту.
+tg.close() // метод закрывает приложение.
+
+
+
+Telegram.WebApp.onEvent('mainButtonClicked', function(){
+	tg.sendData("some string that we need to send"); 
+	//при клике на основную кнопку отправляем данные в строковом виде
+});
+
+let btnED = document.getElementById("btnED"); //получаем кнопку активировать/деактивировать
+btnED.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
+	if (tg.MainButton.isActive){ //если кнопка показана 
+		tg.MainButton.setParams({"color": "#E0FFFF"}); //меняем цвет
+		tg.MainButton.disable() //скрываем кнопку 
+	}
+	else{ //иначе
+		tg.MainButton.setParams({"color": "#143F6B"}); //меняем цвет
+		tg.MainButton.enable() //показываем 
+	}
+});
+
+
 
     let item = "";
 
