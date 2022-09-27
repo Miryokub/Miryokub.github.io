@@ -4,57 +4,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <title>Document</title>
 </head>
 <body>
+
+   
+   
+  
+
+
     <div class="usercard" id="usercard">
         
+
+
+
     </div>
     <div class="container">
         <div class="inner">
     <div class="item">
           <img src="potato.png"  width="92px" height="70px" alt="">
+          <div class="price">15000 sum</div>
+          
           <button class="btn" id="btn1">Add</button>
             </div>
 
             <div class="item">
                 <img src="rice.png"  width="92px" height="70px"alt="">
-                <button class="btn" id="btn2">Add</button>              </div>
+                <div class="price">25000 sum</div>
+                <button class="btn" id="btn2">Add</button>             
+             </div>
 
         <div class="item">
             <img src="salad.png"  width="92px" height="70px" alt="">
+            <div class="price">35000 sum</div>
             <button class="btn" id="btn3">Add</button>
           </div>
         
       <div class="item">
         <img src="fri.png"  width="92px" height="70px" alt="">
+        <div class="price">15000 sum</div>
         <button class="btn" id="btn4">Add</button>
-      </div>
-      
-      <div class="item">
-        <img src="garlic.png"  width="92px" height="70px" alt="">
-        <button class="btn" id="btn5">Add</button>
-          </div>
-      
+      </div>   
           <div class="item">
             <img src="strip.png"  width="92px" height="70px" alt="">
+            <div class="price">15000 sum</div>
             <button class="btn" id="btn6">Add</button>
          </div>
 
          <div class="item">
+            <img src="garlic.png"  width="92px" height="70px" alt="">
+            <div class="price">5000 sum</div>
+            <button class="btn" id="btn5">Add</button>
+              </div>
+
+         <div class="item">
             <img src="ketchup.png"  width="92px" height="70px" alt="">
+            <div class="price">5000 sum</div>
             <button class="btn" id="btn7">Add</button>
           </div>
           
           <div class="item">
             <img src="mayonese.png"  width="92px" height="70px" alt="">
+            <div class="price">5000 sum</div>
             <button class="btn" id="btn8">Add</button>
               </div>
           
               <div class="item">
                 <img src="cheese.png"  width="92px" height="70px" alt="">
+                <div class="price">5000 sum</div>
                 <button class="btn" id="btn9">Add</button>
              </div>
              <br><br>
@@ -79,6 +100,10 @@
             top: 40px;
             left: 28px;
             margin-bottom: 50px;
+        }
+        .price{
+            font-size: 14px;
+            font-family: italic, sans-serif;
         }
        .container{
            max-width: 390px;
@@ -114,6 +139,9 @@
        }
     </style>
 <script>
+
+
+
     let tg = window.Telegram.WebApp;
 
   tg.expand()
@@ -138,61 +166,109 @@
     btn1.addEventListener("click",function(){
           if(tg.MainButton.isVisible){
               tg.MainButton.hide();
+              Swal.fire(
+              'Your order passed',
+              'will be diliver within 30min',
+              'Have great day')
           }
           else{
               tg.MainButton.setText("вы выброли товар один");
               item = "1";
               tg.MainButton.show();
+              Swal.fire(
+              'Your order passed',
+              'will be diliver within 30min',
+              'Have great day')
           }
     });
     btn2.addEventListener("click",function(){
           if(tg.MainButton.isVisible){
               tg.MainButton.hide();
+              Swal.fire(
+              'Your order passed',
+              'will be diliver within 30min',
+              'Have great day')
           }
           else{
               tg.MainButton.setText("вы выброли товар один");
               item = "2";
               tg.MainButton.show();
+              Swal.fire(
+              'Your order passed',
+              'will be diliver within 30min',
+              'Have great day')
           }
     });
     btn3.addEventListener("click",function(){
           if(tg.MainButton.isVisible){
               tg.MainButton.hide();
+              Swal.fire(
+              'Your order passed',
+              'will be diliver within 30min',
+              'Have great day')
           }
           else{
               tg.MainButton.setText("вы выброли товар один");
               item = "3";
               tg.MainButton.show();
+              Swal.fire(
+              'Your order passed',
+              'will be diliver within 30min',
+              'Have great day')
           }
     });
     btn4.addEventListener("click",function(){
           if(tg.MainButton.isVisible){
               tg.MainButton.hide();
+              Swal.fire(
+              'Your order passed',
+              'will be diliver within 30min',
+              'Have great day')
           }
           else{
               tg.MainButton.setText("вы выброли товар один");
               item = "4";
               tg.MainButton.show();
+              Swal.fire(
+              'Your order passed',
+              'will be diliver within 30min',
+              'Have great day')
           }
     });
     btn5.addEventListener("click",function(){
           if(tg.MainButton.isVisible){
               tg.MainButton.hide();
+              Swal.fire(
+              'Your order passed',
+              'will be diliver within 30min',
+              'Have great day')
           }
           else{
               tg.MainButton.setText("вы выброли товар один");
               item = "5";
               tg.MainButton.show();
+              Swal.fire(
+              'Your order passed',
+              'will be diliver within 30min',
+              'Have great day')
           }
     });
     btn6.addEventListener("click",function(){
           if(tg.MainButton.isVisible){
               tg.MainButton.hide();
+              Swal.fire(
+              'Your order passed',
+              'will be diliver within 30min',
+              'Have great day')
           }
           else{
               tg.MainButton.setText("вы выброли товар один");
               item = "6";
               tg.MainButton.show();
+              Swal.fire(
+              'Your order passed',
+              'will be diliver within 30min',
+              'Have great day')
           }
     });
     
@@ -204,6 +280,10 @@
               tg.MainButton.setText("вы выброли товар один");
               item = "7";
               tg.MainButton.show();
+              Swal.fire(
+              'Your order passed',
+              'will be diliver within 30min',
+              'Have great day')
           }
     });
 
@@ -215,6 +295,10 @@
               tg.MainButton.setText("вы выброли товар один");
               item = "8";
               tg.MainButton.show();
+              Swal.fire(
+              'Your order passed',
+              'will be diliver within 30min',
+              'Have great day')
           }
     });
     
@@ -236,11 +320,12 @@
     let usercard = document.getElementById("usercard");
 
     let p = document.createElement("p");
-    p.innerHTML=`${tg.initDataUnsafe.user.first_name}
-    ${tg.initDataUnsafe.user.last_name}`;
+    p.innerHTML=`${tg.initDataUnsafe.first_name}
+    ${tg.initDataUnsafe.last_name}`;
   
     usercard.appendChild(p);
 
 </script>
 </body>
 </html>
+
