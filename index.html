@@ -4,16 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
-
     <title>Document</title>
 </head>
 <body>
-    <div class="usercard" id="usercard">
+    <p class="usercard" id="usercard">
         
-    </div>
+    </p>
     <div class="container_main">
         <div class="inner">
     <div class="item">
@@ -92,7 +88,7 @@
             width: 80px;
             position: relative;
             top: 48px;
-            left: 21px;
+            left: 23px;
             margin-bottom: 60px;
         }
       
@@ -100,7 +96,7 @@
             font-size: 12.5px;
             font-family: italic, sans-serif;
             font-weight: bolder;
-            color:rgba(0, 0, 0, 0.74);
+            color:black;
         }
 
         span{
@@ -147,145 +143,135 @@
 <script>
 let tg = window.Telegram.WebApp;
 
-  tg.expand()
-  tg.MainButton.text = "Changed Text"; //изменяем текст кнопки 
-  tg.MainButton.setText("Changed Text1"); //изменяем текст кнопки иначе
-  
+tg.expand();
+
+tg.MainButton.textColor = "#FFFFFF";
+tg.MainButton.color = "#2cab37";
+
+let item = "";
+
+let btn1 = document.getElementById("btn1");
+let btn2 = document.getElementById("btn2");
+let btn3 = document.getElementById("btn3");
+let btn4 = document.getElementById("btn4");
+let btn5 = document.getElementById("btn5");
+let btn6 = document.getElementById("btn6");
+let btn7 = document.getElementById("btn7");
+let btn8 = document.getElementById("btn8");
+let btn9 = document.getElementById("btn9");
+
+btn1.addEventListener("click", function(){
+	if (tg.MainButton.isVisible) {
+		tg.MainButton.hide();
+	}
+	else {
+		tg.MainButton.setText("Вы выбрали товар 1!");
+		item = "1";
+		tg.MainButton.show();
+	}
+});
+
+btn2.addEventListener("click", function(){
+	if (tg.MainButton.isVisible) {
+		tg.MainButton.hide();
+	}
+	else {
+		tg.MainButton.setText("Вы выбрали товар 2!");
+		item = "2";
+		tg.MainButton.show();
+	}
+});
+
+btn3.addEventListener("click", function(){
+	if (tg.MainButton.isVisible) {
+		tg.MainButton.hide();
+	}
+	else {
+		tg.MainButton.setText("Вы выбрали товар 3!");
+		item = "3";
+		tg.MainButton.show();
+	}
+});
+
+btn4.addEventListener("click", function(){
+	if (tg.MainButton.isVisible) {
+		tg.MainButton.hide();
+	}
+	else {
+		tg.MainButton.setText("Вы выбрали товар 4!");
+		item = "4";
+		tg.MainButton.show();
+	}
+});
+
+btn5.addEventListener("click", function(){
+	if (tg.MainButton.isVisible) {
+		tg.MainButton.hide();
+	}
+	else {
+		tg.MainButton.setText("Вы выбрали товар 5!");
+		item = "5";
+		tg.MainButton.show();
+	}
+});
+
+btn6.addEventListener("click", function(){
+	if (tg.MainButton.isVisible) {
+		tg.MainButton.hide();
+	}
+	else {
+		tg.MainButton.setText("Вы выбрали товар 6!");
+		item = "6";
+		tg.MainButton.show();
+	}
+});
 
 
-
-    let item = "";
-
-    let btn1 = document.getElementById("btn1");
-    let btn2 = document.getElementById("btn2");
-    let btn3 = document.getElementById("btn3");
-    let btn4 = document.getElementById("btn4");
-    let btn5 = document.getElementById("btn5");
-    let btn6 = document.getElementById("btn6");
-    let btn7 = document.getElementById("btn7");
-    let btn8 = document.getElementById("btn8");
-    let btn9 = document.getElementById("btn9");
-    
-    btn1.addEventListener("click",function(){
-          if(tg.MainButton.isVisible){
-              tg.MainButton.hide();
-             
-          }
-          else{
-              tg.MainButton.setText("вы выброли товар один");
-              item = "1";
-              tg.MainButton.show();
-      
-    };
-    btn2.addEventListener("click",function(){
-          if(tg.MainButton.isVisible){
-              tg.MainButton.hide();
-          }     
-          else{
-              tg.MainButton.setText("вы выброли товар один");
-              item = "2";
-              tg.MainButton.show();
-            
-    };
-    btn3.addEventListener("click",function(){
-          if(tg.MainButton.isVisible){
-              tg.MainButton.hide();
-          }   
-          else{
-              tg.MainButton.setText("вы выброли товар один");
-              item = "3";
-              tg.MainButton.show();
-          
-        
-    };
-    btn4.addEventListener("click",function(){
-          if(tg.MainButton.isVisible){
-              tg.MainButton.hide();
-              
-          }
-          else{
-              tg.MainButton.setText("вы выброли товар один");
-              item = "4";
-              tg.MainButton.show();
-              
-          }
-    });
-    btn5.addEventListener("click",function(){
-          if(tg.MainButton.isVisible){
-              tg.MainButton.hide();
-             
-          }
-          else{
-              tg.MainButton.setText("вы выброли товар один");
-              item = "5";
-              tg.MainButton.show();
-          }
-    });
-    btn6.addEventListener("click",function(){
-          if(tg.MainButton.isVisible){
-              tg.MainButton.hide();
-             
-          }
-          else{
-              tg.MainButton.setText("вы выброли товар один");
-              item = "6";
-              tg.MainButton.show();
-          }
-    });
-    
-        btn7.addEventListener("click",function(){
-          if(tg.MainButton.isVisible){
-              tg.MainButton.hide();
-          }
-          else{
-              tg.MainButton.setText("вы выброли товар один");
-              item = "7";
-              tg.MainButton.show();
-          }
-    });
-
-    btn8.addEventListener("click",function(){
-          if(tg.MainButton.isVisible){
-              tg.MainButton.hide();
-          }
-          else{
-              tg.MainButton.setText("вы выброли товар один");
-              item = "8";
-              tg.MainButton.show();
-          }
-    });
-    
-    btn9.addEventListener("click",function(){
-          if(tg.MainButton.isVisible){
-              tg.MainButton.hide();
-          }
-          else{
-              tg.MainButton.setText("вы выброли товар один");
-              item = "9";
-              tg.MainButton.show();
-          }
-    }); 
-    
-    Telegram.WebApp.onEvent("mainButtonClicked", function (){
-         tg.sendData(item);
-    });
-
-    let usercard = document.getElementById("usercard");
-
-    let p = document.createElement("p");
-    p.innerHTML=`${tg.initDataUnsafe.user.first_name}
-    ${tg.initDataUnsafe.user.last_name}`;
-  
-    usercard.appendChild(p);
+btn7.addEventListener("click", function(){
+	if (tg.MainButton.isVisible) {
+		tg.MainButton.hide();
+	}
+	else {
+		tg.MainButton.setText("Вы выбрали товар 7!");
+		item = "7";
+		tg.MainButton.show();
+	}
+});
+btn8.addEventListener("click", function(){
+	if (tg.MainButton.isVisible) {
+		tg.MainButton.hide();
+	}
+	else {
+		tg.MainButton.setText("Вы выбрали товар 8!");
+		item = "8";
+		tg.MainButton.show();
+	}
+});
+btn9.addEventListener("click", function(){
+	if (tg.MainButton.isVisible) {
+		tg.MainButton.hide();
+	}
+	else {
+		tg.MainButton.setText("Вы выбрали товар 9!");
+		item = "9";
+		tg.MainButton.show();
+	}
+});
 
 
+Telegram.WebApp.onEvent("mainButtonClicked", function(){
+	tg.sendData(item);
+});
+
+let usercard = document.getElementById("usercard");
+
+let p = document.createElement("p");
+
+p.innerText = `${tg.initDataUnsafe.user.first_name}
+${tg.initDataUnsafe.user.last_name}`;
 
 
-
-
-
+usercard.appendChild(p); 
 </script>
 </body>
 </html>
-
-
